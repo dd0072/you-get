@@ -439,7 +439,6 @@ class YouTube(VideoExtractor):
         except:
             # VEVO
             if not self.html5player: return
-            self.html5player = self.html5player.replace('\/', '/') # unescape URL (for age-restricted videos)
             self.js = get_content(self.html5player)
 
             try:
